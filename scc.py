@@ -12,7 +12,7 @@ class SCC:
         # calcola i tempi di completamento per ciascun vertice
         dfs = DFS(self.matrice_adiacenza)
 
-        # memorizzo i vertici in una variabile globale
+        # memorizzo i vertici in una variabile locale
         vertici = dfs.vertici
 
         # calcolo il grafo trasposto formato dagli archi del grafo originale con direzioni invertite
@@ -40,6 +40,8 @@ if __name__ == '__main__':
          [0, 0, 0, 0, 0, 0, 0, 1]]
 
     n, d = SCC(m).scc()
+
     print "ho trovato %s componenti fortemente connesse!" % n
+
     for i in range(n):
-        print "la scc #%s ha %s nodi ~> %s" % (i + 1, len(d[i]), d[i])
+        print "la scc #%s ha %s vertici: %s" % (i + 1, len(d[i]), d[i])
