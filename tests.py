@@ -1,5 +1,6 @@
 from graph import Graph
 from scc import SCC
+from timeit import default_timer as timer
 
 
 class Tests:
@@ -46,6 +47,18 @@ class Tests:
             grandezze.append(grandezza_max)
 
         return grandezze
+
+    # Variazione dei tempi dell'algoritmo per trovare scc per grafi di dimensione crescente e probabilita' fissata 0.2
+    def execute_fourth(self):
+        tempi = []
+        for i in self.grandezze_crescenti:
+            g = Graph(i)
+            m = g.matrice_adiacenza(self.prob_fissata)
+            start = timer()
+            _, _ = SCC(m).scc()
+            end = timer()
+            tempi.append(end-start)
+        return tempi
 
 
 
