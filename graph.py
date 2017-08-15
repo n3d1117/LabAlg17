@@ -18,8 +18,3 @@ class Graph(object):
                     if random.randint(1, 10) <= perc:
                         matrix[i][j] = 1
             return matrix
-
-
-if __name__ == '__main__':
-    g = Graph(5)
-    print g.matrice_adiacenza(5)
