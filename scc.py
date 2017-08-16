@@ -29,6 +29,10 @@ class SCC:
 
 if __name__ == '__main__':
 
+    # from graph import Graph
+    # a = Graph(5)
+    # m = a.matrice_adiacenza(3)
+
     # Esempio libro
     m = [[0, 1, 0, 0, 0, 0, 0, 0],
          [0, 0, 1, 0, 1, 1, 0, 0],
