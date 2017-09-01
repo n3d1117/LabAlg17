@@ -60,5 +60,24 @@ class Tests:
             tempi.append(end-start)
         return tempi
 
+    def execute_fifth(self):
+        for i in [5, 10, 15, 20, 25, 30, 35, 40]:
+            scc = []
+            vol = []
+            g = Graph(i)
 
+            for j in range(0, 11, 1):
+                m = g.matrice_adiacenza(j)
+                n, d = SCC(m).scc()
 
+                grandezza_max = 1
+                for a in range(len(d)):
+                    if len(d[a]) > grandezza_max:
+                        grandezza_max = len(d[a])
+
+                scc.append(grandezza_max)
+                vol.append(grandezza_max)
+
+            # Stampa sequenza di valori separati da &, utile per tabella LaTeX
+            print ' & '.join([str(a) for a in scc])
+            print ' & '.join([str(a) for a in vol])

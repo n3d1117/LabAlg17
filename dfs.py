@@ -23,7 +23,7 @@ class DFS:
         else:
             self.dfs()
 
-    # Funzione originale dfs (Depth First Search)
+    # Funzione originale dfs (Depth-First Search)
     # Chiama dfs_visit per tutti i vertici bianchi
     # Se siamo nel passo 3 di scc, memorizzo anche le informazioni riguardanti le componenti fortemente connesse
     def dfs(self):
@@ -35,7 +35,7 @@ class DFS:
                 self.dfs_visit(i)
 
     # Funzione alternativa per il passo 3 di scc: si basa su una array di vertici scoperti in precedenza
-    # Prima colora tutti i vertici scoperti di bianco e mette a None i predecessori
+    # Prima colora tutti i vertici di bianco e mette a None i predecessori
     # Poi ordina i vertici in ordine decrescente rispetto ai tempi di completamento u.f
     # Infine chiama dfs() originale
     def dfs_scc(self, vertici_scc):
@@ -71,7 +71,7 @@ class DFS:
     def arco(self, u, i):
         return self.matrice_adiacenza[u][i] == 1
 
-    # Inserisce i valori value se non sono gia' presenti nel dizionario all'indice dato
+    # Inserisce i valori 'value' se non sono gia' presenti nel dizionario all'indice dato
     def append(self, index, value):
         for v in value:
             if v not in self.dizionario_scc[index]:

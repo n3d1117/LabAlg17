@@ -13,8 +13,6 @@ class Exp:
         x = range(1, len(numbers)+1)
         plt.figure()
         plt.plot(x, numbers)
-        plt.title("Variazione del numero di componenti fortemente connesse per grafi\ndi dimensione crescente "
-                  "e probabilita' di archi a 0.2")
         plt.xlabel('Dimensione grafo')
         plt.ylabel('Numero di componenti fortemente connesse')
         plt.grid()
@@ -24,8 +22,6 @@ class Exp:
         x = np.arange(0.0, 1.1, 0.1)
         plt.figure()
         plt.plot(x, numbers)
-        plt.title("Variazione del numero di componenti fortemente connesse per grafi\ndi dimensione 5 "
-                  "e probabilita' di archi crescente")
         plt.xlabel("Probabilita' di archi")
         plt.ylabel('Numero di componenti fortemente connesse')
         plt.grid()
@@ -35,8 +31,6 @@ class Exp:
         x = range(1, len(grandezze)+1)
         plt.figure()
         plt.plot(x, grandezze)
-        plt.title("Variazione della grandezza massima di componenti fortemente connesse\nper grafidi dimensione "
-                  "crescente e probabilita' di archi a 0.2")
         plt.xlabel("Dimensione grafo")
         plt.ylabel('Grandezza massima componenti fortemente connesse')
         plt.grid()
@@ -46,10 +40,8 @@ class Exp:
         x = range(1, len(tempi)+1)
         plt.figure()
         plt.plot(x, tempi)
-        plt.title("Variazione dei tempi di esecuzione dell'algoritmo per trovare componenti fortemente connesse\nper "
-                  "grafi di dimensione crescente e probabilita' di archi a 0.2")
         plt.xlabel("Dimensione grafo")
-        plt.ylabel('Tempo di esecuzione')
+        plt.ylabel('Tempo di esecuzione (secondi)')
         plt.grid()
 
 
